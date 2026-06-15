@@ -3,9 +3,6 @@
 """
 Inferência bayesiana em cosmologia usando medidas H(z).
 
-Este script implementa, de forma reprodutível e comentada, os principais
-blocos metodológicos descritos no paper enviado:
-
 1. modelos cosmológicos planos LCDM e wCDM;
 2. verossimilhança gaussiana para dados H(z) com erros independentes;
 3. priors uniformes normalizados;
@@ -15,7 +12,7 @@ blocos metodológicos descritos no paper enviado:
    via integração termodinâmica.
 
 Uso rápido:
-    python src/cosmology_hz_bayes.py --data data/Hz.csv --out results
+    python CosmoFit.py --data data/Hz.csv --out results
 
 Para um teste mais rápido, reduza --steps-post e --steps-ti.
 """
