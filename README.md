@@ -2,26 +2,12 @@
 
 Repositório didático para ajustar modelos cosmológicos planos **LCDM** e **wCDM** a medidas observacionais do parâmetro de Hubble, **H(z)**, obtidas por cronômetros cósmicos.
 
-O projeto segue os elementos metodológicos do paper: verossimilhança gaussiana, estatística chi-quadrado, priors uniformes, MCMC com `emcee`, inicialização por Evolução Diferencial, AIC, BIC e evidência bayesiana aproximada por integração termodinâmica.
+O projeto segue verossimilhança gaussiana, estatística chi-quadrado, priors uniformes, MCMC com `emcee`, inicialização por Evolução Diferencial, AIC, BIC e evidência bayesiana aproximada por integração termodinâmica.
 
-## Estrutura
-
-```text
-.
-├── data/
-│   └── Hz.csv
-├── src/
-│   └── cosmology_hz_bayes.py
-├── results/
-│   └── .gitkeep
-├── requirements.txt
-├── .gitignore
-└── README.md
-```
 
 ## Dados
 
-O arquivo `data/Hz.csv` contém três colunas:
+O arquivo `Hz.csv` contém três colunas:
 
 | coluna | significado |
 |---|---|
@@ -82,13 +68,13 @@ pip install -r requirements.txt
 Execução padrão:
 
 ```bash
-python src/cosmology_hz_bayes.py --data data/Hz.csv --out results
+python CosmoFit.py --data Hz.csv --out results
 ```
 
 Execução rápida para testar se tudo está funcionando:
 
 ```bash
-python src/cosmology_hz_bayes.py --data data/Hz.csv --out results --steps-post 2000 --steps-ti 500 --prior-samples 5000
+python CosmoFit.py --data Hz.csv --out results --steps-post 2000 --steps-ti 500 --prior-samples 5000
 ```
 
 ## Saídas geradas
